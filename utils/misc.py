@@ -59,12 +59,12 @@ def qa_valid(dataloader, model, criterion, optimizer, device):
             start_prob_fold.append(start_logits)
             end_true_fold.append(end_pos)
             end_prob_fold.append(end_logits)
-    start_true_fold = torch.cat(start_true_fold)
-    start_prob_fold = torch.cat(start_prob_fold)
-    start_pred_fold = start_prob_fold.argmax(dim = -1)
-    end_true_fold = torch.cat(end_true_fold)
-    end_prob_fold = torch.cat(end_prob_fold)
-    end_pred_fold = end_prob_fold.argmax(dim = -1)
+    start_true_fold = torch.cat(start_true_fold).cpu().numpy()
+    start_prob_fold = torch.cat(start_prob_fold).cpu().numpy()
+    start_pred_fold = start_prob_fold.argmax(axis = -1)
+    end_true_fold = torch.cat(end_true_fold).cpu().numpy()
+    end_prob_fold = torch.cat(end_prob_fold).cpu().numpy()
+    end_pred_fold = end_prob_fold.argmax(axis = -1)
     return {
         'loss': valid_loss / len(dataloader),
         'start_true_fold': start_true_fold,
