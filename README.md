@@ -24,11 +24,19 @@ PYTHONPATH=./ python dataprocess/process1.py --dataset_name squad2.0
 
 ### Unit Test
 
-* QALoader
+* for loader
 
 ```shell
 # QALoader for SQuAD1.1
 PYTHONPATH=./ python loaders/QALoader.py --dataset_name squad1.1
 # QALoader for SQuAD2.0
 PYTHONPATH=./ python loaders/QALoader.py --dataset_name squad2.0
+```
+
+* for module
+
+```shell
+# QAModule
+# You can add --official to use official implementation of BertForQuestionAnswering
+PYTHONPATH=./ python modules/QAModule.py
 ```
