@@ -18,6 +18,10 @@ def get_parser():
     parser.add_argument('--valid_file_path', default = 'valid.csv', help = '')
     parser.add_argument('--test_file_path' , default = 'test.csv' , help = '')
 
+    parser.add_argument('--batch_size' , type = int, default = 64 , help = '')
+    parser.add_argument('--max_qsn_len', type = int, default = 53 , help = '')
+    parser.add_argument('--max_psg_len', type = int, default = 200, help = '')
+
     # module
 
     parser.add_argument('--bert_path', default = 'bert', help = '')
