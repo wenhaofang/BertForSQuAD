@@ -2,6 +2,17 @@
 
 This is a repository for Extractive Question Answering task, using BERT model and SQuAD dataset.
 
+### Environment
+
+```shell
+# create environment
+conda create --name NAME python=3.8
+# activate environment
+conda activate NAME
+# install packages
+pip install -r requirements.txt
+```
+
 ### Data Process
 
 * process0.py
