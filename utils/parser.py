@@ -32,6 +32,13 @@ def get_parser():
     parser.add_argument('--hidden_size', type = int, default = 768, help = '')
     parser.add_argument('--num_classes', type = int, default = 2, help = '')
 
+    # train
+
+    parser.add_argument('--learning_rate', type = float, default = 5e-5, help = '')
+    parser.add_argument('--num_epoch', type = int, default = 10, help = '')
+
+    parser.add_argument('--early_stop', type = int, default = 5, help = '')
+
     return parser
 
 if __name__ == '__main__':

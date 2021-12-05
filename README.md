@@ -51,3 +51,11 @@ PYTHONPATH=./ python loaders/QALoader.py --dataset_name squad2.0
 # You can add --official to use official implementation of BertForQuestionAnswering
 PYTHONPATH=./ python modules/QAModule.py
 ```
+
+### Main Process
+
+```shell
+python main.py
+```
+
+You can change the config either in the command line or in the file `utils/parser.py`
